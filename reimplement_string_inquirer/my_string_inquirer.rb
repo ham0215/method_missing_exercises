@@ -1,0 +1,2 @@
+class MyStringInquirer
+end
