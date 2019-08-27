@@ -13,7 +13,7 @@ module MyDynamicFinders
           u.public_send(c) == args[i]
         end
       end
-      raise unless u
+      raise if u.nil? && hit
       u
     else
       super
