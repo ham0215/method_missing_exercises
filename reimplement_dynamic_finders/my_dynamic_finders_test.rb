@@ -13,6 +13,10 @@ class MyDynamicFindersTest < MiniTest::Test
     assert_equal 2, User.find_by_first_name('John').id
   end
 
+  def test_find_by_first_name_nil
+    assert_equal nil, User.find_by_first_name('ham')
+  end
+
   def test_find_by_last_name
     assert_equal 3, User.find_by_last_name('Hatsune').id
   end
