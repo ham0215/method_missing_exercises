@@ -14,6 +14,10 @@ class MyStringInquirerTest < MiniTest::Test
     refute @string_inquirer.development?
   end
 
+  def test_respond_to
+    assert @string_inquirer.respond_to?(:production?)
+  end
+
   def test_missing_question_mark
     assert_raises(NoMethodError) { @string_inquirer.production }
   end
